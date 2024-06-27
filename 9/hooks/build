@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker buildx build --platform linux/amd64,linux/arm64 -t kakinari/rocky-ja:9 --push .
+docker buildx build --platform linux/amd64,linux/arm64 -t kakinari/rocky-ja:latest --push .

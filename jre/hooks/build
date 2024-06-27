@@ -1,0 +1,8 @@
+docker buildx build --platform linux/amd64,linux/arm64 --push --build-arg BASE=8 --build-arg TARGET=1.8.0 -t kakinari/rocky-ja:8-jre8 .
+docker buildx build --platform linux/amd64,linux/arm64 --push --build-arg BASE=8 --build-arg TARGET=11 -t kakinari/rocky-ja:8-jre11 .
+docker buildx build --platform linux/amd64,linux/arm64 --push --build-arg BASE=8 --build-arg TARGET=17 -t kakinari/rocky-ja:8-jre17 .
+docker buildx build --platform linux/amd64,linux/arm64 --push --build-arg BASE=8 --build-arg TARGET=21 -t kakinari/rocky-ja:8-jre21 .
+docker buildx build --platform linux/amd64,linux/arm64 --push --build-arg BASE=9 --build-arg TARGET=1.8.0 -t kakinari/rocky-ja:9-jre8 .
+docker buildx build --platform linux/amd64,linux/arm64 --push --build-arg BASE=9 --build-arg TARGET=11 -t kakinari/rocky-ja:9-jre11 .
+docker buildx build --platform linux/amd64,linux/arm64 --push --build-arg BASE=9 --build-arg TARGET=17 -t kakinari/rocky-ja:9-jre17 .
+docker buildx build --platform linux/amd64,linux/arm64 --push --build-arg BASE=9 --build-arg TARGET=21 -t kakinari/rocky-ja:9-jre21 .

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker buildx build --platform linux/amd64,linux/arm64 --build-arg TARGET=8 -t kakinari/rocky-ja:8-dev --push .
+docker buildx build --platform linux/amd64,linux/arm64 --build-arg TARGET=9 -t kakinari/rocky-ja:9-dev --push .

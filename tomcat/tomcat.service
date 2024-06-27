@@ -1,0 +1,23 @@
+# Systemd unit file for tomcat
+[Unit]
+Description=Apache Tomcat Web Application Container
+After=syslog.target network.target
+
+[Service]
+User=tomcat
+Group=apache
+UMask=0007
+Type=oneshot
+Environment=CATALINA_HOME=/opt/tomcat_home
+Environment=CATALINA_BASE=/opt/tomcat
+Environment=CATALINA_PID=/opt/tomcat/temp/tomcat.pid
+RemainAfterExit=yes
+
+ExecStart=/opt/tomcat/bin/startup.sh
+ExecStop=/opt/tomcat/bin/shutdown.sh
+ExecReStart=/opt/tomcat/bin/shutdown.sh;sleep 10;/opt/tomcat/bin/startup.sh
+
+[Install]
+WantedBy=multi-user.target
+
+
